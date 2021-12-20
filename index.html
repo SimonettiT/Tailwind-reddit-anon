@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+</head>
+<body class="bg-stone-800">
+    <form action="" method="get" class="flex flex-col items-start">
+        <div class="flex flex-row">
+            <div class="my-2 flex flex-row no-wrap items-center">
+                <label class="w-20 mr-2 inline-block text-right text-white font-semibold" for="name">Name:</label>
+                <input class="bg-gray-200 px-1 rounded w-40 focus:outline-none ease-in-out duration-150 focus:p-1 focus:bg-white" type="text" name="name" id="name">
+            </div>
+            <div class="ml-2 my-2 flex flex-row no-wrap items-center">
+                <label class="inline-block mr-2 text-right text-white font-semibold" for="subject">Subject:</label>
+                <input class="bg-gray-200 px-1 rounded w-40 focus:outline-none ease-in-out duration-150 focus:p-1 focus:bg-white" type="text" name="subject" id="subject"> 
+            </div>
+        </div>
+        <div class="ml-[88px]">
+            <label class="mr-2 text-right text-white font-semibold" for="spoiler-img">Spoiler Image:</label>
+            <input type="checkbox" name="spoiler-img" id="spoiler-img">
+        </div>
+        <div class="my-2 flex flex-row no-wrap items-center">
+            <label class="mr-2 w-20 inline-block text-right text-white font-semibold" for="comment">Comment:</label>
+            <textarea class="bg-gray-200 px-1 rounded w-[395px] focus:outline-none ease-in-out duration-150 focus:p-1 focus:bg-white" name="comment" id="comment" cols="30" rows="3"></textarea>
+        </div>
+        <div class="my-2 flex flex-row no-wrap items-center">
+            <label class="mr-2 w-20 inline-block text-right text-white font-semibold" for="file">File: </label>
+            <input class="rounded w-80 text-sm focus:outline-none ease-in-out duration-150 focus:p-1 text-white" type="file" name="file" id="file">
+        </div>
+        <p id="show-more" class="ml-[88px] cursor-pointer text-cyan-400 underline decoration-solid">Show more options</p>
+        <p id="show-less" class="ml-[88px] cursor-pointer text-cyan-400 underline decoration-solid hidden">Show less options</p>
+        <div id="passwordDel" class="my-2 flex flex-row no-wrap items-center hidden">
+            <label class="mr-2 w-20 inline-block text-right text-white font-semibold" for="password">Password:</label>
+            <input class="bg-gray-200 px-1 rounded w-36 focus:outline-none ease-in-out duration-150 focus:p-1 focus:bg-white" type="password" name="password" id="password">
+        </div>
+        <input type="submit" value="Post" class="cursor-pointer ml-[88px] my-2 mx w-20 py-1 bg-white text-black font-semibold rounded-full border border-purple-200 ease-in-out duration-150 hover:text-white hover:bg-black hover:ring-inset hover:ring-2 hover:ring-white hover focus:outline-none focus:ring-2 focus:ring-indigo-50 focus:ring-offset-2">
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $('#show-more').click(function() {
+            $('#show-more').hide();
+            $('#show-less').show();
+            $('#passwordDel').show("fast");
+        });
+        $('#show-less').click(function() {
+            $('#show-less').hide();
+            $('#show-more').show();
+            $('#passwordDel').hide("fast");
+        });
+    </script>
+</body>
+</html>
