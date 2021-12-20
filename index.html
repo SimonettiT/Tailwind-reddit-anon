@@ -10,14 +10,14 @@
 </head>
 <body class="bg-stone-800">
     <form action="" method="get" class="flex flex-col items-start">
-        <div class="flex flex-row">
+        <div class="flex flex-col sm:flex-row ">
             <div class="my-2 flex flex-row no-wrap items-center">
                 <label class="w-20 mr-2 inline-block text-right text-white font-semibold" for="name">Name:</label>
-                <input class="bg-gray-200 px-1 rounded w-40 focus:outline-none ease-in-out duration-150 focus:p-1 focus:bg-white" type="text" name="name" id="name">
+                <input class="bg-gray-200 px-1 rounded w-80 sm:w-40 focus:outline-none ease-in-out duration-150 focus:p-1 focus:bg-white" type="text" name="name" id="name">
             </div>
-            <div class="ml-2 my-2 flex flex-row no-wrap items-center">
-                <label class="inline-block mr-2 text-right text-white font-semibold" for="subject">Subject:</label>
-                <input class="bg-gray-200 px-1 rounded w-40 focus:outline-none ease-in-out duration-150 focus:p-1 focus:bg-white" type="text" name="subject" id="subject"> 
+            <div class="sm:ml-2 my-2 flex flex-row no-wrap items-center">
+                <label class="w-20 sm:w-auto inline-block mr-2 text-right text-white font-semibold" for="subject">Subject:</label>
+                <input class="bg-gray-200 px-1 rounded w-80 sm:w-40 focus:outline-none ease-in-out duration-150 focus:p-1 focus:bg-white" type="text" name="subject" id="subject"> 
             </div>
         </div>
         <div class="ml-[88px]">
@@ -26,7 +26,7 @@
         </div>
         <div class="my-2 flex flex-row no-wrap items-center">
             <label class="mr-2 w-20 inline-block text-right text-white font-semibold" for="comment">Comment:</label>
-            <textarea class="bg-gray-200 px-1 rounded w-[395px] focus:outline-none ease-in-out duration-150 focus:p-1 focus:bg-white" name="comment" id="comment" cols="30" rows="3"></textarea>
+            <textarea class="bg-gray-200 px-1 rounded w-80 sm:w-[395px] focus:outline-none ease-in-out duration-150 focus:p-1 focus:bg-white" name="comment" id="comment" cols="30" rows="3"></textarea>
         </div>
         <div class="my-2 flex flex-row no-wrap items-center">
             <label class="mr-2 w-20 inline-block text-right text-white font-semibold" for="file">File: </label>
