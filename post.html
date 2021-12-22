@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post style</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-stone-800">
+    <article class="text-white m-2">
+        <div class="flex flex-row no-wrap items-center space-x-1">
+
+            <input type="checkbox" name="" id="">
+
+            <div class="inline-block post-menu-option">
+                <svg aria-label="Post Menu" class="post-menu-btn icon inline-block cursor-pointer" title="Post Menu" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="#ffffff" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 4v16l13 -8z" /></svg>
+                <ul class="post-menu-list absolute bg-zinc-700 text-cyan-300 text-sm border-b-2 border-white hidden">
+                    <li class="m-1 hover:text-cyan-100 cursor-pointer">Report</li>
+                    <li class="m-1 hover:text-cyan-100 cursor-pointer">Global Report</li>
+                    <li class="m-1 hover:text-cyan-100 cursor-pointer">Delete Post</li>
+                    <li class="m-1 hover:text-cyan-100 cursor-pointer">Unlink Files</li>
+                </ul>
+            </ul>
+            </div>
+
+            <div class="inline-block block-menu">
+                <svg aria-label="Block Menu" class="block-menu-btn icon inline-block relative cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" stroke-width="3" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="12" cy="12" r="9" /><line x1="5.7" y1="5.7" x2="18.3" y2="18.3" /></svg>
+                <ul class="block-menu-list absolute bg-zinc-700 text-cyan-300 text-sm border-b-2 border-white hidden">
+                    <li class="m-1 hover:text-cyan-100 cursor-pointer">Hide OP</li>
+                    <li class="m-1 hover:text-cyan-100 cursor-pointer">Hide thread</li>
+                    <li class="m-1 hover:text-cyan-100 cursor-pointer">Filter name</li>
+                </ul>
+            </div>
+
+            <p class="inline-block text-indigo-600 font-bold">Post title</p>
+            <p class="inline-block"> - </p>
+            <p class="inline-block text-emerald-500 font-bold">Username</p>
+            <p class="inline-block font-semibold">User role</p>
+        </div>
+        <p class="font-light text-zinc-400">Date, time and No. Post</p>
+        <div>
+            <p class="inline-block cursor-pointer hover:underline">[Reply]</p>
+            <p class="inline-block cursor-pointer hover:underline">[Last 50 Posts]</p>
+            <p class="inline-block cursor-pointer hover:underline">[Watch Thread]</p>
+        </div>
+        <div class="flex flex-row">
+            <p class="mr-2 cursor-pointer hover:text-zinc-400 hide-image">[‒]</p>
+            <p class="mr-2 cursor-pointer hover:text-zinc-400 show-image hidden">[+]</p>
+            <div class="image-container">
+                <p class="text-zinc-400">File: file data and specifications</p>
+                <a href="example-photo.jpg" target="_blank"><img class="max-w-sm" src="example-photo.jpg" alt=""></a>
+            </div>
+        </div>
+        <p class="text-zinc-300 my-3">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum corporis, sapiente quos laudantium maiores praesentium nemo enim natus dolorum voluptatibus a expedita saepe voluptate architecto. Impedit fuga esse vel placeat!
+        </p>
+        <p class="text-sm text-zinc-300">154 posts and 16 image replies ommited. <span class="text-white cursor-pointer hover:underline">Click to expand.</span></p>
+    </article>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $('.hide-image').click(function() {
+            $('.hide-image').hide();
+            $('.show-image').show();
+            $('.image-container').hide("fast");
+        });
+        $('.show-image').click(function() {
+            $('.show-image').hide();
+            $('.hide-image').show();
+            $('.image-container').show("fast");
+        });
+        $('.post-menu-btn').click(function(){
+            $('.post-menu-list').toggle("fast");
+            $('.block-menu-list').hide("fast");
+        });
+        $('.block-menu-btn').click(function(){
+            $('.block-menu-list').toggle("fast");
+            $('.post-menu-list').hide("fast");
+        });
+
+    </script>
+</body>
+</html>
