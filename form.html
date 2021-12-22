@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Form style</title>
     <script src="https://cdn.tailwindcss.com"></script>
     
 </head>
@@ -37,6 +37,8 @@
         <div id="passwordDel" class="my-2 flex flex-row no-wrap items-center hidden">
             <label class="mr-2 w-20 inline-block text-right text-white font-semibold" for="password">Password:</label>
             <input class="bg-gray-200 px-1 rounded w-36 focus:outline-none ease-in-out duration-150 focus:p-1 focus:bg-white" type="password" name="password" id="password">
+            <p id="show-password" class="inline-block ml-1 cursor-pointer text-cyan-400 underline decoration-solid">Show Password</p>
+            <p id="hide-password" class="inline-block ml-1 cursor-pointer text-cyan-400 underline decoration-solid hidden">Hide Password</p>
         </div>
         <input type="submit" value="Post" class="cursor-pointer ml-[88px] my-2 mx w-20 py-1 bg-white text-black font-semibold rounded-full border border-purple-200 ease-in-out duration-150 hover:text-white hover:bg-black hover:ring-inset hover:ring-2 hover:ring-white hover focus:outline-none focus:ring-2 focus:ring-indigo-50 focus:ring-offset-2">
     </form>
@@ -51,6 +53,30 @@
             $('#show-less').hide();
             $('#show-more').show();
             $('#passwordDel').hide("fast");
+        });
+        function generateRandomString(length) {
+            var text = "";
+            var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+            for (var i = 0; i < length; i++) {
+                text += possible.charAt(Math.floor(Math.random() * possible.length));
+            }
+            return text;
+            };
+        $('document').ready(function() {
+            var string = generateRandomString(7);
+                $("#password").val(string);
+        });
+
+        $('#show-password').click(function() {
+            $('#show-password').hide();
+            $('#hide-password').css('display','inline-block');
+            $('#password').attr('type','text');
+        });
+        $('#hide-password').click(function() {
+            $('#hide-password').hide();
+            $('#show-password').show();
+            $('#password').attr('type','password');
         });
     </script>
 </body>
