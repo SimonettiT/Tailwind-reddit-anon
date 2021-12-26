@@ -9,7 +9,7 @@
     
 </head>
 <body class="bg-stone-800">
-    <div class="w-full border-b-2 border-white">
+    <div class="sticky top-0 w-screen border-b-2 border-white bg-stone-800">
         <div class="flex flex-row items-center h-full justify-end mr-4 space-x-2 h-12">
             <a href="#">
                 <svg class="icon go-up my-1 ease-in-out duration-200 hover:fill-white hover:stroke-black hover:mt-0 hover:mb-2 hover:ring-2 hover:ring-white hover:rounded-full" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" stroke-width="2" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="12" cy="12" r="9" /><line x1="12" y1="8" x2="8" y2="12" /><line x1="12" y1="8" x2="12" y2="16" /><line x1="16" y1="12" x2="12" y2="8" /></svg>
@@ -23,11 +23,11 @@
         <div class="flex flex-col sm:flex-row ">
             <div class="my-2 flex flex-row no-wrap items-center">
                 <label class="w-20 mr-2 inline-block text-right text-white font-semibold" for="name">Name:</label>
-                <input class="bg-gray-200 px-1 rounded w-80 sm:w-40 focus:outline-none ease-in-out duration-150 focus:p-1 focus:bg-white" type="text" name="name" id="name">
+                <input class="bg-gray-200 px-1 rounded max-w-80 sm:w-40 focus:outline-none ease-in-out duration-150 focus:p-1 focus:bg-white" type="text" name="name" id="name">
             </div>
             <div class="sm:ml-2 my-2 flex flex-row no-wrap items-center">
                 <label class="w-20 sm:w-auto inline-block mr-2 text-right text-white font-semibold" for="subject">Subject:</label>
-                <input class="bg-gray-200 px-1 rounded w-80 sm:w-40 focus:outline-none ease-in-out duration-150 focus:p-1 focus:bg-white" type="text" name="subject" id="subject"> 
+                <input class="bg-gray-200 px-1 rounded max-w-80 sm:w-40 focus:outline-none ease-in-out duration-150 focus:p-1 focus:bg-white" type="text" name="subject" id="subject"> 
             </div>
         </div>
         <div class="ml-[88px]">
@@ -36,7 +36,7 @@
         </div>
         <div class="my-2 flex flex-row no-wrap items-center">
             <label class="mr-2 w-20 inline-block text-right text-white font-semibold" for="comment">Comment:</label>
-            <textarea class="bg-gray-200 px-1 rounded w-80 sm:w-[395px] focus:outline-none ease-in-out duration-150 focus:p-1 focus:bg-white" name="comment" id="comment" cols="30" rows="3"></textarea>
+            <textarea class="bg-gray-200 px-1 rounded max-w-80 sm:w-[395px] focus:outline-none ease-in-out duration-150 focus:p-1 focus:bg-white" name="comment" id="comment" cols="30" rows="3"></textarea>
         </div>
         <div class="my-2 flex flex-row no-wrap items-center">
             <label class="mr-2 w-20 inline-block text-right text-white font-semibold" for="file">File: </label>
